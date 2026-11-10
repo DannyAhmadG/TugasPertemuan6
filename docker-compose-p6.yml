@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   web:
     image: nginx:latest
@@ -8,7 +6,7 @@ services:
       - "8080:80"
     restart: always
 
-attacker-l4:
+  attacker-l4:
     image: alpine:latest
     container_name: attacker-l4
     command: tail -f /dev/null
